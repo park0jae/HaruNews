@@ -19,23 +19,19 @@ public class Article {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
 
-	@Column(name = "channel")
-	private String channel;
-
 	@Column(name = "title")
 	private String title;
+
+	@Column(name = "original_link")
+	private String originallink;
 
 	@Column(name = "link")
 	private String link;
 
 	@Lob
-	@Column(name = "content")
-	private String content;
+	@Column(name = "description")
+	private String description;
 
-	public Article(String channel, String title, String link, String content) {
-		this.channel = channel;
-		this.title = title;
-		this.link = link;
-		this.content = content;
-	}
+	@Column(name = "pub_date")
+	private String pubDate;
 }
