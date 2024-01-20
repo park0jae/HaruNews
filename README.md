@@ -32,6 +32,7 @@
 
 ### 로컬에서 프로젝트 실행 방법
 
-1. https://developers.naver.com/main/ 에 접속하여 Naver API 사용을 위한 Client-id, Client-secret을 발급 받아 application.yml에 설정합니다.
+1. git clone을 통해 프로젝트를 다운로드 받습니다.
+2. https://developers.naver.com/main/ 에 접속하여 Naver API 사용을 위한 Client-id, Client-secret을 발급 받아 application.yml에 설정합니다.
 2. slack 앱에서 Incoming WebHooks를 추가하고, 메세지를 전달받을 채널을 설정합니다.
 3. WebHooks 설정을 마치고 WebHook URL을 복사하여 application.yml에 설정합니다.
