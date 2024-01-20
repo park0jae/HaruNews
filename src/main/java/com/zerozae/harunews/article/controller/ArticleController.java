@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -23,12 +24,13 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 public class ArticleController {
 
-	private static final String SLACK_URL = "https://hooks.slack.com/services/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";
+	@Value("${slack.url}")
+	private String SLACK_URL;
 
 	private final ArticleService articleService;
 	private final RestTemplate restTemplate;
 
-	@Scheduled(cron = "0 45 21 * * ?")
+	@Scheduled(cron = "0 0 22 * * ?")
 	public void getNaverNewsByKeyword() {
 		log.info(">>>>>>> get Naver News By Keyword Start !!!!");
 		List<ArticleResponse> naverNewsByRandomKeyword = articleService.getNaverNewsByRandomKeyword();
