@@ -30,7 +30,7 @@ public class ArticleController {
 	private final ArticleService articleService;
 	private final RestTemplate restTemplate;
 
-	@Scheduled(cron = "0 0 22 * * ?")
+	@Scheduled(cron = "0 0 9 * * ?")
 	public void getNaverNewsByKeyword() {
 		log.info(">>>>>>> get Naver News By Keyword Start !!!!");
 		List<ArticleResponse> naverNewsByRandomKeyword = articleService.getNaverNewsByRandomKeyword();
