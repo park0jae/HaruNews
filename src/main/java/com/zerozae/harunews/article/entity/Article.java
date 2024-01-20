@@ -25,7 +25,7 @@ public class Article {
 	@Column(name = "original_link")
 	private String originallink;
 
-	@Column(name = "link")
+  @Column(name = "link")
 	private String link;
 
 	@Lob
