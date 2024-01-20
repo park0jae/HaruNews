@@ -1,3 +1,17 @@
+config:
+  type: aws-parameterstore:/config/example/
+
 logging:
   level:
     org.hibernate.SQL: DEBUG
+
+spring:
+  config:
+    import: ${config.type}
+
+  naver:
+    client-id: ${naver.client-id}
+    client-secret: ${naver.client-secret}
+
+  slack:
+    url: ${slack-url}

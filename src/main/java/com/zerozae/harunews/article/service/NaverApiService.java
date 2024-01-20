@@ -18,10 +18,10 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class NaverApiService {
 
-	@Value("${naver.client-id}")
+	@Value("${spring.naver.client-id}")
 	private String clientId;
 
-	@Value("${naver.client-secret}")
+	@Value("${spring.naver.client-secret}")
 	private String clientSecret;
 
 	private final RestTemplate restTemplate;

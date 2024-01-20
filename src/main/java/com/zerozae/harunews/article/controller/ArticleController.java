@@ -24,7 +24,7 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 public class ArticleController {
 
-	@Value("${slack.url}")
+	@Value("${spring.slack.url}")
 	private String SLACK_URL;
 
 	private final ArticleService articleService;
